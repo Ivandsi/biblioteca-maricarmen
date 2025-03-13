@@ -25,4 +25,6 @@ urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
     path("api/", api.urls),
+    path('llibres/', views.llista_llibres, name='llista_llibres'),
+    path('add_llibre/', views.add_llibre, name='add_llibre'),
 ]

@@ -1,0 +1,23 @@
+<!-- templates/llista_llibres.html -->
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llibres</title>
+</head>
+<body>
+    <h1>Llista de Llibres</h1>
+    <ul>
+        {% for llibre in llibres %}
+            <li>
+                <strong>{{ llibre.titol }}</strong> - {{ llibre.autor }}<br>
+                {{ llibre.resum }}<br>
+                ISBN: {{ llibre.ISBN }}<br>
+                Editorial: {{ llibre.editorial }}<br>
+                Lingua: {{ llibre.llengua.nom }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
